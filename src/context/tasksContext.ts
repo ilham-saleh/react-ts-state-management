@@ -3,7 +3,7 @@ import type { Task, TaskAction } from "../reducers/taskReducer";
 
 interface TasksContextType {
   tasks: Task[];
-  dispatch: React.Dispatch<TaskAction>;
+  taskDispatch: React.Dispatch<TaskAction>;
 }
 
 const TasksContext = React.createContext<TasksContextType>(

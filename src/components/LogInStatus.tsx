@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
+import AuthContext from "../context/authContext";
 
 const LogInStatus = () => {
-  const [user, setUser] = useState("");
+  const { user, authDispatch } = useContext(AuthContext);
 
   if (user) {
     return (
       <div>
         <p className="text-success">Welcome, {user}!</p>
         <a href="#">
-          <button className="btn btn-danger" onClick={() => setUser("")}>
+          <button
+            className="btn btn-danger"
+            onClick={() => authDispatch({ type: "LOGOUT" })}
+          >
             Log Out
           </button>
         </a>
@@ -18,7 +22,11 @@ const LogInStatus = () => {
 
   return (
     <a href="#">
-      <button onClick={() => setUser("Ilham Saleh")}>Log In</button>
+      <button
+        onClick={() => authDispatch({ type: "LOGIN", username: "Ilham Saleh" })}
+      >
+        Log In
+      </button>
     </a>
   );
 };
