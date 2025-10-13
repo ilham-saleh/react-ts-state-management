@@ -3,7 +3,7 @@ import TasksContext from "../context/tasksContext";
 import LogInStatus from "./LogInStatus";
 
 const NavBar = () => {
-  const { tasks } = useContext(TasksContext);
+//   const { tasks } = useContext(TasksContext);
 
   return (
     <nav className="navbar d-flex justify-content-between container">
