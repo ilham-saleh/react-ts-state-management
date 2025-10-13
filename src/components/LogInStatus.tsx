@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AuthContext from "../context/authContext";
 
 const LogInStatus = () => {
-  const { user, authDispatch } = useContext(AuthContext);
+  const { user, dispatch } = useContext(AuthContext);
 
   if (user) {
     return (
@@ -11,7 +11,7 @@ const LogInStatus = () => {
         <a href="#">
           <button
             className="btn btn-danger"
-            onClick={() => authDispatch({ type: "LOGOUT" })}
+            onClick={() => dispatch({ type: "LOGOUT" })}
           >
             Log Out
           </button>
@@ -23,7 +23,7 @@ const LogInStatus = () => {
   return (
     <a href="#">
       <button
-        onClick={() => authDispatch({ type: "LOGIN", username: "Ilham Saleh" })}
+        onClick={() => dispatch({ type: "LOGIN", username: "Ilham Saleh" })}
       >
         Log In
       </button>

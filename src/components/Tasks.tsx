@@ -2,7 +2,7 @@ import { useContext } from "react";
 import TasksContext from "../context/tasksContext";
 
 const Tasks = () => {
-  const { tasks, taskDispatch } = useContext(TasksContext);
+  const { tasks, dispatch } = useContext(TasksContext);
 
   return (
     <div className="container mt-5">
@@ -11,7 +11,7 @@ const Tasks = () => {
         <button
           className="btn btn-primary mb-3"
           onClick={() =>
-            taskDispatch({
+            dispatch({
               type: "ADD",
               task: { id: Date.now(), title: "Task " + (tasks.length + 1) },
             })
@@ -30,7 +30,7 @@ const Tasks = () => {
 
             <button
               className="btn btn-danger"
-              onClick={() => taskDispatch({ type: "DELETE", taskId: task.id })}
+              onClick={() => dispatch({ type: "DELETE", taskId: task.id })}
             >
               Delete
             </button>

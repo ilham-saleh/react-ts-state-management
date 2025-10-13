@@ -3,7 +3,7 @@ import type { AuthAction } from "../reducers/authReducer";
 
 interface AuthContextType {
   user: string;
-  authDispatch: React.Dispatch<AuthAction>;
+  dispatch: React.Dispatch<AuthAction>;
 }
 
 const AuthContext = React.createContext<AuthContextType>({} as AuthContextType);
