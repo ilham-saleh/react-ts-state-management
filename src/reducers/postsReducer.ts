@@ -18,7 +18,7 @@ type Action =
 
 export const initialState: State = { loading: false, data: null, error: null };
 
-const postsReducer = (state: State, action: Action): any => {
+const postsReducer = (state: State, action: Action) => {
   switch (action.type) {
     case "LOADING":
       return { ...state, loading: true };
