@@ -1,6 +1,6 @@
 import AuthProvider from "./components/AuthProvider";
 import NavBar from "./components/NavBar";
-import TasksProvider from "./components/TasksProvider";
+import { TasksProvider } from "./tasks";
 import HomePage from "./pages/HomePage";
 
 function App() {
