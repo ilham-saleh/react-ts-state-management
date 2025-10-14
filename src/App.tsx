@@ -1,4 +1,4 @@
-import AuthProvider from "./components/AuthProvider";
+import { AuthProvider } from "./auth";
 import NavBar from "./components/NavBar";
 import { TasksProvider } from "./tasks";
 import HomePage from "./pages/HomePage";
