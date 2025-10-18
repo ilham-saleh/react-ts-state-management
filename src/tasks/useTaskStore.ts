@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Task } from "./TasksProvider";
+import type { Task } from "./tasksReducer";
 
 // Using Zustand (alternative implementation)
 interface TaskStore {

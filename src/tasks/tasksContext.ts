@@ -1,16 +1,9 @@
 import React from "react";
-import type { Task } from "./TasksProvider";
+import type { Task, TaskAction } from "./tasksReducer";
 
-// interface TasksContextType {
-//   tasks: Task[];
-//   dispatch: React.Dispatch<TaskAction>;
-// }
-
-// interface for Zustand implementation
 interface TasksContextType {
   tasks: Task[];
-  addTask: (task: Task) => void;
-  deleteTask: (taskId: number) => void;
+  dispatch: React.Dispatch<TaskAction>;
 }
 
 const TasksContext = React.createContext<TasksContextType>(

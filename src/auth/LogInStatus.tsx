@@ -1,8 +1,11 @@
-import { useContext } from "react";
-import AuthContext from "./authContext";
+// import { useContext } from "react";
+// import AuthContext from "./authContext";
+
+import useAuthStore from "./authStore";
 
 const LogInStatus = () => {
-  const { user, dispatch } = useContext(AuthContext);
+  // const { user, dispatch } = useContext(AuthContext);
+  const { user, login, logout } = useAuthStore();
 
   if (user) {
     return (
@@ -11,7 +14,8 @@ const LogInStatus = () => {
         <a href="#">
           <button
             className="btn btn-danger"
-            onClick={() => dispatch({ type: "LOGOUT" })}
+            // onClick={() => dispatch({ type: "LOGOUT" })}
+            onClick={() => logout()}
           >
             Log Out
           </button>
@@ -23,7 +27,9 @@ const LogInStatus = () => {
   return (
     <a href="#">
       <button
-        onClick={() => dispatch({ type: "LOGIN", username: "Ilham Saleh" })}
+        // onClick={() => dispatch({ type: "LOGIN", username: "Ilham Saleh" })}
+        onClick={() => login("Ilham Saleh")}
+        className="btn btn-primary"
       >
         Log In
       </button>

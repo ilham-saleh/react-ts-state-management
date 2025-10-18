@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import TasksContext from "./tasksContext";
+// import { useContext } from "react";
+// import TasksContext from "./tasksContext";
+import useTaskStore from "./useTaskStore";
 
 const Tasks = () => {
   // const { tasks, dispatch } = useContext(TasksContext);
-  const { tasks, addTask, deleteTask } = useContext(TasksContext);
+  const { tasks, addTask, deleteTask } = useTaskStore();
 
   return (
     <div className="container mt-5">
